@@ -1,0 +1,21 @@
+.Hero {
+  height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .Hero {
+    height: 100%;
+    .p-32 {
+      padding: 5%;
+
+      .text-7xl {
+        font-size: 3rem;
+        line-height: 3.8rem;
+      }
+
+      .mt-10 {
+        margin-top: 5%;
+      }
+    }
+  }
+}
