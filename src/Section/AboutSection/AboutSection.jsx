@@ -5,7 +5,7 @@ import { FaRegStar } from "react-icons/fa";
 
 const AboutSection = () => {
   return (
-    <div className="AboutSection bg-[#1b1b1b] text-[#aeaeae]">
+    <div className="AboutSection bg-[#1b1b1b] text-[#aeaeae]" id="About">
       <hr className="bg-[#aeaeae]" style={{ textDecoration: "doted" }} />
       <div className="p-24">
         <div className="p-1 space-y-2 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0">
