@@ -1,0 +1,23 @@
+.BlogList {
+  .spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#474bff 0 90deg, #dbdcef 0 180deg);
+    animation: spinner-a78xsi 1s infinite linear;
+  }
+
+  @keyframes spinner-a78xsi {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .BlogList {
+    .p-32 {
+      padding: 5%;
+    }
+  }
+}

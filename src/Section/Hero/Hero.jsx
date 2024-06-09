@@ -22,8 +22,8 @@ const Hero = () => {
             It`s Not Magic, It`s Programming.
           </h1>
           <p className="mt-10 text-lg font-light text-[#aeaeae]">
-            I am a <span className="text-[#f8f8f8]">software engineer</span>{" "}
-            software engineer who enjoys seamlessly bridging the gap between{" "}
+            I am a <span className="text-[#f8f8f8]">software engineer</span> who
+            enjoys seamlessly bridging the gap between{" "}
             <span className="text-[#f8f8f8]">people and digital space</span> by
             day, and a <span className="text-[#f8f8f8]">anime</span> lover.
           </p>

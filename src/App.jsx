@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import { Toaster } from "react-hot-toast";
 import Projects from "./Pages/Projects/Projects";
+import Blog from "./Pages/Blog/Blog";
+import ReadBlog from "./Pages/ReadBlog/ReadBlog";
 // 1. import `NextUIProvider` component
 
 // import axios from "axios";
@@ -19,6 +21,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/Projects" element={<Projects />}></Route>
+            <Route path="/Blog" element={<Blog />}></Route>
+            <Route path="/ReadBlog/:id" element={<ReadBlog />}></Route>
           </Routes>
         </BrowserRouter>
       </div>
