@@ -28,7 +28,7 @@ const Hero = () => {
             day, and a <span className="text-[#f8f8f8]">anime</span> lover.
           </p>
           <div className="mt-10 flex gap-5">
-            <button className="p-3 pr-6 pl-6 rounded-full bg-[#f8f8f8] text-black text-sm">
+            <button className="p-3 pr-6 pl-6 rounded-full bg-[#f8f8f8] text-black text-sm hover:bg-transparent border border-[#f8f8f8] hover:text-[#f8f8f8] hover:border-[#f8f8f8]">
               Get In Touch
             </button>
             <button className="p-3 pr-6 pl-6 rounded-full bg-transparent text-[#f8f8f8] border-[#f8f8f8] border text-sm">
