@@ -1,6 +1,7 @@
 // import React from 'react'
 import "./AboutSection.scss";
 import Me from "../../assets/logo.png";
+import { FaRegStar } from "react-icons/fa";
 
 const AboutSection = () => {
   return (
@@ -18,12 +19,12 @@ const AboutSection = () => {
                 seamlessly bridging the gap between people and digital space by
                 day, and a anime 🏯 lover.
               </p>
-              <p className="mt-5 text-sm">
+              {/* <p className="mt-5 text-sm">
                 I`ve built products for companies and businesses around the
                 globe ranging from marketing websites to complex solutions and
                 enterprise apps with focus on fast, elegant and accessible user
                 experiences.
-              </p>
+              </p> */}
               <p className="mt-5 text-sm">
                 Currently, I work at{" "}
                 <span className="text-[#f8f8f8]">NYM Technologies Limited</span>{" "}
@@ -50,9 +51,129 @@ const AboutSection = () => {
                 projects.
               </p>
               <div
-                className="p-3 mt-5 bg-[#131418]"
-                style={{ borderLeft: "2px solid green" }}
-              ></div>
+                className="p-3 mt-5 bg-[#131418] text-[#f8f8f8]"
+                style={{ borderLeft: "3px solid green" }}
+              >
+                <p className="text-sm font-light">
+                  Approximately 6 months into my journey in the software
+                  engineering space, I had the privilege of delivering lectures
+                  to a diverse group of Computer Science undergraduates and
+                  graduates and also had the opportunity of developing numerous
+                  projects / assignments for about 20+ final year students after
+                  graduating secondary school.
+                </p>
+              </div>
+              <p className="mt-5 text-sm">
+                I once also led the frontend team at Code Tech Technologies, an
+                technology startup through building multiple React applications
+                into a single robust websites and platform.
+              </p>
+              <div className="mt-5">
+                <p className="mt-5 text-sm">
+                  Here are a few technologies I’ve been working with recently:
+                </p>
+                <div className="">
+                  <div className="flex gap-3">
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Javascript</span>
+                    </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Typescript</span>
+                    </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Nodejs</span>
+                    </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>PHP</span>
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>SQL</span>
+                    </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Mongodb</span>
+                    </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>REST API</span>
+                    </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Supabase</span>
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Firebase</span>
+                    </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Reactjs</span>
+                    </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Tailwindcss</span>
+                    </p>
+
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Git</span>
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>PostgreSQL</span>
+                    </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>scss</span>
+                    </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Next.js</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           {/* image */}
