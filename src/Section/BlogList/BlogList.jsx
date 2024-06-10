@@ -4,6 +4,7 @@ import BlogListCard from "../../Components/BlogListCard";
 import "./BlogList.scss";
 import axios from "axios";
 import { BiLogoSlack } from "react-icons/bi";
+import Skeleton from "../../Components/Skeleton";
 
 const BlogList = () => {
   const [loading, setLoading] = useState(false);
@@ -81,9 +82,10 @@ const BlogList = () => {
           {/* <BlogListCard /> */}
           {/* id, title, article, tag, authorImage, authorName, authorUsername, articleImage ,createdAt  */}
           {loading ? (
-            <div className="flex justify-center">
-              <div className="spinner"></div>
-            </div>
+            // <div className="flex justify-center">
+            //   <div className="spinner"></div>
+            // </div>
+            <Skeleton />
           ) : (
             <div className="mt-10">
               {currentBlogs.map((blog) => (

@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import Projects from "./Pages/Projects/Projects";
 import Blog from "./Pages/Blog/Blog";
 import ReadBlog from "./Pages/ReadBlog/ReadBlog";
+import Resume from "./Pages/Resume/Resume";
 // 1. import `NextUIProvider` component
 
 // import axios from "axios";
@@ -23,6 +24,7 @@ function App() {
             <Route path="/Projects" element={<Projects />}></Route>
             <Route path="/Blog" element={<Blog />}></Route>
             <Route path="/ReadBlog/:id" element={<ReadBlog />}></Route>
+            <Route path="/Resume" element={<Resume />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

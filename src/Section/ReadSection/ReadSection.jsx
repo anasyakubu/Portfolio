@@ -7,6 +7,7 @@ import { IoCalendarNumber } from "react-icons/io5";
 import axios from "axios";
 import he from "he";
 import { Link, useParams } from "react-router-dom";
+import Skeleton from "../../Components/Skeleton";
 
 const ReadSection = () => {
   const { id } = useParams();
@@ -66,9 +67,10 @@ const ReadSection = () => {
             <span>Back</span>
           </Link>
           {loading ? (
-            <div className="flex justify-center">
-              <div className="spinner"></div>
-            </div>
+            // <div className="flex justify-center">
+            //   <div className="spinner"></div>
+            // </div>
+            <Skeleton />
           ) : (
             <div className="mt-10 content">
               <h2 className="text-4xl">{title}</h2>
