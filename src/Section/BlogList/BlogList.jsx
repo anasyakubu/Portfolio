@@ -42,7 +42,7 @@ const BlogList = () => {
         });
         // Reverse the order of blogs after formatting
         const getBlogs = fetchBlogs
-          .filter((blog) => blog.userID === "665cdfb361a15916c78c09cf")
+          // .filter((blog) => blog.userID === "665cdfb361a15916c78c09cf")
           .reverse();
 
         // Set the state with formatted and reversed blogs
