@@ -171,6 +171,12 @@ const AboutSection = () => {
                       </span>
                       <span>Next.js</span>
                     </p>
+                    <p className="text-sm flex gap-2 mt-5">
+                      <span className="text-green-500">
+                        <FaRegStar />
+                      </span>
+                      <span>Python</span>
+                    </p>
                   </div>
                 </div>
               </div>
