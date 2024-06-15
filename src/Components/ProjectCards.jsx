@@ -21,7 +21,7 @@ const ProjectCards = ({ Image, title, details, link, live, color }) => {
                   fill="currentColor"
                   strokeWidth="0"
                   viewBox="0 0 16 16"
-                  className="text-green-400"
+                  className={`${color}`}
                   height="8"
                   width="8"
                   xmlns="http://www.w3.org/2000/svg"
