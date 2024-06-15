@@ -1,19 +1,74 @@
 // import React from 'react'
 import "./ProjectSection.scss";
-import invoice from "../../assets/invoice.png";
-import ai from "../../assets/ai-sass.png";
-import prompt from "../../assets/ai-prompt.png";
-import task from "../../assets/task-manager.png";
-import healty from "../../assets/healthy.png";
-import foc from "../../assets/focai.png";
-import portifolo from "../../assets/portifiolo-2.png";
-// import dbrs from "../../assets/dbrs.png";
-import blog from "../../assets/blog.png";
-
+import { useState, useEffect } from "react";
+import axios from "axios";
 import ProjectCards from "../../Components/ProjectCards";
+import Skeleton from "../../Components/SkeletonProjects";
+
 import { Link } from "react-router-dom";
 
 const ProjectSection = () => {
+  const [loading, setLoading] = useState(false);
+  const [projects, setProjects] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  // const [bgColor, setBgColor] = useState("");
+  const projectsPerPage = 8; // Number of projects per page
+
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get("https://anasyakubu-cms-api.onrender.com/projectList")
+      .then((result) => {
+        const fetchProjects = result.data.map((project) => {
+          // Convert createdAt string to a Date object
+          const createdAtDate = new Date(project.createdAt);
+          const live = project.status;
+
+          // Determine the bgColor based on the status
+          const bgColor = live === "Live" ? "text-green-400" : "text-red-600";
+          // Options for formatting the date
+          const options = {
+            weekday: "long", // Full name of the day of the week
+            day: "2-digit", // Two-digit day of the month
+            month: "long", // Full name of the month
+            year: "numeric", // Full year
+          };
+
+          // Format the date using Intl.DateTimeFormat
+          const formattedDate = new Intl.DateTimeFormat(
+            "en-US",
+            options
+          ).format(createdAtDate);
+
+          // Return the project object with formatted createdAt
+          return {
+            ...project,
+            createdAt: formattedDate,
+            bgColor: bgColor,
+          };
+        });
+
+        // Set the state with formatted projects
+        setProjects(fetchProjects);
+        setLoading(false);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  // Calculate the current projects to display
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  // Calculate total pages
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
   return (
     <div className="ProjectSection bg-[#1b1b1b] text-[#aeaeae]">
       <div className="p-24">
@@ -25,79 +80,64 @@ const ProjectSection = () => {
             projects can be find in my Universe.
           </p>
         </div>
+
         <div className="mt-10">
-          <div className="p-1 space-y-2 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0">
-            <ProjectCards
-              Image={invoice}
-              title="Daily Invoice"
-              details="Professional and Easy-to-use Online Invoicing Software for Startups, Business Owners and Freelancers."
-              link="https://daily-invoice.vercel.app/"
-              live="Live"
-              color="bg-green-600"
-            />
-            <ProjectCards
-              Image={ai}
-              title="Titan AI"
-              details=" AI Tools to Share Your Knowledge and Empower Youself"
-              link="https://titan-orpin.vercel.app/"
-              live="Live"
-              color="bg-green-600"
-            />
-            <ProjectCards
-              Image={prompt}
-              title="Promptee"
-              details="An Open-source AI Prompting tool for modern world to discover, create and sharing creative prompts"
-              link="https://ai-prompts-app-nine.vercel.app/"
-              live="Live"
-              color="bg-green-600"
-            />
-            <ProjectCards
-              Image={blog}
-              title="Blog 3"
-              details="A blog platform to share and write article all around the world"
-              link="https://blog-3-post.vercel.app/"
-              live="Live"
-              color="bg-green-600"
-            />
-            <ProjectCards
-              Image={healty}
-              title="Healthy"
-              details="A website for healthy food and diets"
-              link="https://healthy-website-psi.vercel.app/"
-              live="Live"
-              color="bg-green-600"
-            />
-            <ProjectCards
-              Image={task}
-              title="Devograph"
-              details="Devograph, your ultimate task manager software designed to streamline your workflow and enhance your productivity."
-              link="https://devograph.vercel.app/login"
-              live="Live"
-              color="bg-green-600"
-            />
-            <ProjectCards
-              Image={foc}
-              title="FocGPT"
-              details="An AI App for studying for Faculty of Computing BUK"
-              link="https://foc-ai.vercel.app/"
-              live="Live"
-              color="bg-green-600"
-            />
-            <ProjectCards
-              Image={portifolo}
-              title="First Portifolio"
-              details="My first portifolio design using Reactjs"
-              link=""
-              live="Not-Live"
-              color="bg-red-500"
-            />
+          <div className="">
+            {loading ? (
+              <div className="p-1 space-y-2 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0">
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+              </div>
+            ) : (
+              <div className="p-1 space-y-2 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0">
+                {currentProjects.map((project) => (
+                  <ProjectCards
+                    key={project._id}
+                    id={project._id}
+                    Image={project.projectImage}
+                    name={project.name}
+                    details={project.details}
+                    live={project.status}
+                    link={project.projectLink}
+                    color={project.bgColor}
+                    // createdAt={project.createdAt}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+          {/* Pagination Controls */}
+          <div className="mt-5 flex justify-center">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index}
+                onClick={() => paginate(index + 1)}
+                className={`px-3 py-1 mx-1 rounded ${
+                  index + 1 === currentPage
+                    ? "bg-blue-500 text-white"
+                    : "bg-black"
+                }`}
+                style={{ display: "none" }}
+              >
+                {index + 1}
+              </button>
+            ))}
           </div>
         </div>
+
         <div className="mt-5">
-          <button className="p-3 pr-6 pl-6 rounded-full bg-[#f8f8f8] text-black text-sm hover:bg-transparent border border-[#f8f8f8] hover:text-[#f8f8f8] hover:border-[#f8f8f8]">
-            <Link to="/Project"></Link>
+          <Link
+            to="/Projects"
+            className="p-3 pr-6 pl-6 rounded-full bg-[#f8f8f8] text-black text-sm hover:bg-transparent border border-[#f8f8f8] hover:text-[#f8f8f8] hover:border-[#f8f8f8]"
+          >
             View More
-          </button>
+          </Link>
         </div>
       </div>
     </div>

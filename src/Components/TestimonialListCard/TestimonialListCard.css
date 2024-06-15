@@ -1,0 +1,9 @@
+.swiper .swiper-slide {
+  width: 300px;
+}
+
+@media (max-width: 600px) {
+  .swiper .swiper-slide {
+    width: 100%;
+  }
+}

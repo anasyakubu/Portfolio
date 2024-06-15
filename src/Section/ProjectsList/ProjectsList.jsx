@@ -80,7 +80,16 @@ const ProjectsList = () => {
         <div className="mt-10">
           <div className="">
             {loading ? (
-              <Skeleton />
+              <div className="p-1 space-y-2 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0">
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+              </div>
             ) : (
               <div className="p-1 space-y-2 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0">
                 {currentProjects.map((project) => (
