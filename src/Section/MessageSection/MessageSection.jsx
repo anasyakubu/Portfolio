@@ -19,7 +19,7 @@ const MessageSection = () => {
                 <div className="">
                   <label htmlFor="">Full Name :</label>
                   <input
-                    className="w-full mt-3 p-3 rounded-full outline-none border border-black text-black"
+                    className="w-full mt-3 p-4 rounded-3xl outline-none border border-black text-black"
                     type="text"
                     placeholder="Anas Yakubu"
                   />
@@ -28,7 +28,7 @@ const MessageSection = () => {
                 <div className="">
                   <label htmlFor="">Phone :</label>
                   <input
-                    className="w-full mt-3 p-3 rounded-full outline-none border border-black text-black"
+                    className="w-full mt-3 p-4 rounded-3xl  outline-none border border-black text-black"
                     type="text"
                     placeholder="+234-9090 9999 37"
                   />
@@ -40,15 +40,15 @@ const MessageSection = () => {
                 </label>
 
                 <input
-                  className="w-full mt-3 p-3 rounded-full outline-none border border-black text-black"
+                  className="w-full mt-3 p-4 rounded-3xl  outline-none border border-black text-black"
                   type="text"
-                  placeholder="+234-9090 9999 37"
+                  placeholder="yakubuanas04@gmail.com"
                 />
               </div>
               <div className="mt-5">
                 <label htmlFor="">Message</label>
                 <textarea
-                  className="w-full mt-3 p-3 rounded-3xl outline-none border border-black text-black"
+                  className="w-full mt-3 p-4 rounded-3xl outline-none border border-black text-black"
                   name=""
                   id=""
                   rows="10"
