@@ -6,6 +6,7 @@ import Projects from "./Pages/Projects/Projects";
 import Blog from "./Pages/Blog/Blog";
 import ReadBlog from "./Pages/ReadBlog/ReadBlog";
 import Resume from "./Pages/Resume/Resume";
+import Messages from "./Pages/Messages/Messages";
 // 1. import `NextUIProvider` component
 
 // import axios from "axios";
@@ -25,6 +26,7 @@ function App() {
             <Route path="/Blog" element={<Blog />}></Route>
             <Route path="/ReadBlog/:id" element={<ReadBlog />}></Route>
             <Route path="/Resume" element={<Resume />}></Route>
+            <Route path="/Messages" element={<Messages />}></Route>
           </Routes>
         </BrowserRouter>
       </div>
