@@ -68,6 +68,7 @@ const ProjectSection = () => {
 
   // Calculate total pages
   const totalPages = Math.ceil(projects.length / projectsPerPage);
+  console.log(projects);
 
   return (
     <div className="ProjectSection bg-[#1b1b1b] text-[#aeaeae]">
@@ -101,7 +102,7 @@ const ProjectSection = () => {
                     key={project._id}
                     id={project._id}
                     Image={project.projectImage}
-                    name={project.name}
+                    title={project.name}
                     details={project.details}
                     live={project.status}
                     link={project.projectLink}

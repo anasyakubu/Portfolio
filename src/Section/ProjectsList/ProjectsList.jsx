@@ -97,7 +97,7 @@ const ProjectsList = () => {
                     key={project._id}
                     id={project._id}
                     Image={project.projectImage}
-                    name={project.name}
+                    title={project.name}
                     details={project.details}
                     live={project.status}
                     link={project.projectLink}
