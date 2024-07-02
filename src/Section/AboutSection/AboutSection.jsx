@@ -55,12 +55,13 @@ const AboutSection = () => {
                 style={{ borderLeft: "3px solid green" }}
               >
                 <p className="text-sm font-light">
-                  Approximately 6 months into my journey in the software
-                  engineering space, I had the privilege of delivering lectures
-                  to a diverse group of Computer Science undergraduates and
-                  graduates and also had the opportunity of developing numerous
-                  projects / assignments for about 20+ final year students after
-                  graduating secondary school.
+                  Three years into my journey as a software engineer, I had the
+                  honor of delivering a speech at our graduation ceremony.
+                  Addressing my classmates, I reflected on our collective
+                  growth, the challenges we overcame, and the bright futures we
+                  are now prepared to embrace. It was a moment of pride and
+                  gratitude, celebrating not just our achievements, but the
+                  bonds we formed along the way.
                 </p>
               </div>
               <p className="mt-5 text-sm">
