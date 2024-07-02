@@ -9,7 +9,7 @@ const ProjectCards = ({ Image, title, details, link, live, color }) => {
         <div className="">
           <img className="rounded-md" src={Image} alt="Project Image" />
           <div className="">
-            <h6 className="mt-3">{title}</h6>
+            <h6 className="mt-3 text-[#f8f8f8]">{title}</h6>
             <p className="mt-3 text-sm">{details}</p>
             <div className="mt-3 flex justify-between">
               <div
