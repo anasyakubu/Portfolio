@@ -17,7 +17,8 @@ const ProjectSection = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://anasyakubu-cms-api.onrender.com/projectList")
+      .get("https://anasyakubu-cms-backend.vercel.app/projectList")
+      // .get("https://anasyakubu-cms-api.onrender.com/projectList") render endpoint
       .then((result) => {
         const fetchProjects = result.data.map((project) => {
           // Convert createdAt string to a Date object

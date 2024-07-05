@@ -19,7 +19,8 @@ export default function TestimonySlides() {
 
   useEffect(() => {
     axios
-      .get("https://anasyakubu-cms-api.onrender.com/testimonyList")
+      .get("https://anasyakubu-cms-backend.vercel.app/testimonyList")
+      // .get("https://anasyakubu-cms-api.onrender.com/testimonyList") // Render endpoint
       .then((result) => {
         const fetchTestimony = result.data;
         const testimony = fetchTestimony
