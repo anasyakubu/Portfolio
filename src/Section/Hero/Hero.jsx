@@ -3,8 +3,32 @@ import { Zoom } from "react-awesome-reveal";
 import Nav from "../../Components/Nav";
 import "./Hero.scss";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+// import jsPDF from "jspdf";
 
 const Hero = () => {
+  const DownloadPDF = () => {
+    const pdfUrl = "../../assets/Resume.pdf"; // Adjust the path to your PDF file
+
+    fetch(pdfUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.blob();
+      })
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Anas_Yakubu.pdf";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        toast.success("Resume Downloaded");
+      })
+      .catch((error) => console.error("Error fetching the PDF:", error));
+  };
   // #aeaeae
   // #f8f8f8
   // font-nunito-eb
@@ -37,13 +61,14 @@ const Hero = () => {
               >
                 Get In Touch
               </Link>
-              <Link
-                to="/Resume"
-                target="_blank"
+              <button
+                // to="/Resume"
+                onClick={DownloadPDF}
+                // target="_blank"
                 className="p-3 pr-6 pl-6 rounded-full bg-transparent text-[#f8f8f8] border-[#f8f8f8] border text-sm"
               >
                 View Resume
-              </Link>
+              </button>
             </div>
           </Zoom>
         </div>
