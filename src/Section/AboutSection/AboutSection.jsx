@@ -14,61 +14,53 @@ const AboutSection = () => {
             <div className="">
               <h6 className="text-[#aeaeae] text-3xl">About Me.</h6>
               <p className="mt-5 text-sm">
-                Hi, <span className="text-[#f8f8f8]">I`m Anas Yakubu</span> 👋
-                and I enjoy solving problems for a living.At times, I enjoys
-                seamlessly bridging the gap between people and digital space by
-                day, and a anime 🏯 lover.
+                Hi, I`m <span className="text-[#f8f8f8]">I`m Anas Yakubu</span>{" "}
+                👋. I love solving problems for a living, bridging the gap
+                between people and digital spaces, and I`m an anime 🏯
+                enthusiast.
               </p>
-              {/* <p className="mt-5 text-sm">
-                I`ve built products for companies and businesses around the
-                globe ranging from marketing websites to complex solutions and
-                enterprise apps with focus on fast, elegant and accessible user
-                experiences.
-              </p> */}
               <p className="mt-5 text-sm">
-                Currently, I work at{" "}
+                I currently work at{" "}
                 <span className="text-[#f8f8f8]">NYM Technologies Limited</span>{" "}
-                as a Junior Full Stack Developer crafting thoughtful and
-                inclusive experiences that adhere to web standards for over 1000
-                users across the world. <br /> Before now, I was an intern Full
-                Stack Developer at{" "}
-                <span className="text-[#f8f8f8]">
-                  NYM Technologies Limited,
-                </span>{" "}
-                where I worked on websites and softwares for users.
+                as a Junior Full Stack Developer, where I design and develop
+                inclusive web experiences that meet web standards for over 1000
+                users globally. <br /> Before this role, I was an intern Full
+                Stack Developer at the same company, focusing on developing
+                websites and software for users.
               </p>
+
               <p className="mt-5 text-sm">
-                Prior to{" "}
+                Before joining{" "}
                 <span className="text-[#f8f8f8]">
                   NYM Technologies Limited,
                 </span>{" "}
-                I`m a student of{" "}
+                , I studied{" "}
+                <span className="text-[#f8f8f8]">
+                  BSc Information Technology
+                </span>{" "}
+                at{" "}
                 <span className="text-[#f8f8f8]">
                   Bayero University Kano (BUK)
                 </span>{" "}
-                studying Bsc.Information Technologies learning HTML, building
-                JavaScript applications and interfaces for school and personal
-                projects.
+                , where I learned HTML and developed JavaScript applications and
+                interfaces for academic and personal projects.
               </p>
               <div
                 className="p-3 mt-5 bg-[#131418] text-[#f8f8f8]"
                 style={{ borderLeft: "3px solid green" }}
               >
                 <p className="text-sm font-light">
-                  Three years into my journey as a software engineer, I had the
-                  honor of delivering a speech at our graduation ceremony.
-                  Addressing my classmates, I reflected on our collective
-                  growth, the challenges we overcame, and the bright futures we
-                  are now prepared to embrace. It was a moment of pride and
-                  gratitude, celebrating not just our achievements, but the
-                  bonds we formed along the way.
+                  Three years into my software engineering journey, I delivered
+                  a graduation speech, reflecting on our growth, challenges, and
+                  future prospects. It was a proud and grateful moment,
+                  celebrating our achievements and the bonds we formed.
                 </p>
               </div>
-              <p className="mt-5 text-sm">
+              {/* <p className="mt-5 text-sm">
                 I once also led the frontend team at Code Tech Technologies, an
                 technology startup through building multiple React applications
                 into a single robust websites and platform.
-              </p>
+              </p> */}
               <div className="mt-5">
                 <p className="mt-5 text-sm">
                   Here are a few technologies I’ve been working with recently:
