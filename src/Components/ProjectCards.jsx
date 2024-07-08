@@ -30,7 +30,7 @@ const ProjectCards = ({ Image, title, details, link, live, color }) => {
                 </svg>
               </div>
               <Link to={link} target="_blank" className="text-sm flex gap-2">
-                <span>Vist</span>
+                <span>Visit</span>
                 <span>
                   <FiExternalLink />
                 </span>
