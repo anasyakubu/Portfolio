@@ -23,7 +23,8 @@ const Subscribers = () => {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        "https://anasyakubu-cms-api.onrender.com/createSubscribers",
+        "https://anasyakubu-cms-backend.vercel.app/createSubscribers",
+        //"https://anasyakubu-cms-api.onrender.com/createSubscribers",
         {
           email,
         }
