@@ -14,10 +14,9 @@ const AboutSection = () => {
             <div className="">
               <h6 className="text-[#aeaeae] text-3xl">About Me.</h6>
               <p className="mt-5 text-sm">
-                Hi, I`m <span className="text-[#f8f8f8]">I`m Anas Yakubu</span>{" "}
-                👋. I love solving problems for a living, bridging the gap
-                between people and digital spaces, and I`m an anime 🏯
-                enthusiast.
+                Hi, I`m <span className="text-[#f8f8f8]">Anas Yakubu</span> 👋.
+                I love solving problems for a living, bridging the gap between
+                people and digital spaces, and I`m an anime 🏯 enthusiast.
               </p>
               <p className="mt-5 text-sm">
                 I currently work at{" "}
@@ -34,7 +33,7 @@ const AboutSection = () => {
                 <span className="text-[#f8f8f8]">
                   NYM Technologies Limited,
                 </span>{" "}
-                , I studied{" "}
+                I studied{" "}
                 <span className="text-[#f8f8f8]">
                   BSc Information Technology
                 </span>{" "}
