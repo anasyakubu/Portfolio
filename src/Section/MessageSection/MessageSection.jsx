@@ -21,7 +21,7 @@ const MessageSection = () => {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        "https://api-anasyakubu-cms.vercel.app/message/list",
+        "https://api-anasyakubu-cms.vercel.app/message/add",
         //"https://anasyakubu-cms-api.onrender.com/createMessage",
         {
           fullName,
