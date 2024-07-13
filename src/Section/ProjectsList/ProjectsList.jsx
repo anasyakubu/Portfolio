@@ -14,7 +14,7 @@ const ProjectsList = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://anasyakubu-cms-backend.vercel.app/projectList")
+      .get("https://api-anasyakubu-cms.vercel.app/project/list")
       // .get("https://anasyakubu-cms-api.onrender.com/projectList") render endpoint
       .then((result) => {
         const fetchProjects = result.data.map((project) => {
