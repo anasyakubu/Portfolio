@@ -4,6 +4,7 @@ import "./ReadSection.scss";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { IoCalendarNumber } from "react-icons/io5";
 // import BlogImg from "../../assets/uploadthings-code.png";
+import { Helmet } from "react-helmet";
 import axios from "axios";
 import he from "he";
 import { Link, useParams } from "react-router-dom";
@@ -58,6 +59,20 @@ const ReadSection = () => {
 
   return (
     <div className="ReadSection">
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={title} />
+        <meta
+          property="og:title"
+          content="Delving into my mind, sharing experiences, ideas, tips, passions
+relating to software engineering or engineering in general."
+        />
+        <meta property="og:description" content={title} />
+        <meta property="og:image" content={articleImage} />
+        <meta property="og:url" content="https://anasyakubu.vercel.app/Blog" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <div className="p-32 py-16">
         <div className="">
           <Link to="/Blog" className="flex gap-2 text-green-600">
