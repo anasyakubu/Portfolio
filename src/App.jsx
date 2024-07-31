@@ -7,12 +7,6 @@ import Blog from "./Pages/Blog/Blog";
 import ReadBlog from "./Pages/ReadBlog/ReadBlog";
 import Resume from "./Pages/Resume/Resume";
 import Messages from "./Pages/Messages/Messages";
-// 1. import `NextUIProvider` component
-
-// import axios from "axios";
-
-// axios.defaults.baseURL = "https://devograph.onrender.com";
-// axios.defaults.withCredentials = true;
 
 function App() {
   return (
