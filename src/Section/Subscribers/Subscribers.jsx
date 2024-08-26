@@ -4,6 +4,12 @@ import { useState, useRef } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { createClient } from "smtpexpress";
+
+const smtpexpressClient = createClient({
+  projectId: "sm0pid-GNSi_42MRoNaqrNQr1RF_oO21",
+  projectSecret: "02850ea442d078d93b2c66543cf4a07dbddf569b3fc09752bd",
+});
 
 const Subscribers = () => {
   const navigate = useNavigate();
@@ -37,6 +43,59 @@ const Subscribers = () => {
         navigate("/Messages");
         formRef.current.reset(); // Reset the form here
       }
+      // send Mail to users when Subscribe
+      await smtpexpressClient.sendApi.sendMail({
+        subject:
+          "Welcome to Our Community! You're Now Subscribed to Our Newsletter",
+        message: `<!DOCTYPE html>
+              <html lang="en">
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Welcome to Our Community! You're Now Subscribed to Our Newsletter</title>
+                  <style>
+                      body {
+                          font-family: Arial, sans-serif;
+                          line-height: 1.6;
+                          color: #333;
+                      }
+                      .container {
+                          width: 90%;
+                          max-width: 600px;
+                          margin: 0 auto;
+                          padding: 20px;
+                          background-color: #f9f9f9;
+                          border-radius: 10px;
+                          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                      }
+                      .footer {
+                          margin-top: 20px;
+                      }
+                  </style>
+              </head>
+              <body>
+                  <div class="container">
+                      <p>Hi,</p>
+
+                      <p>Thank you for subscribing to our newsletter! We're thrilled to have you join our community. Get ready for regular updates, insights, and exclusive content delivered straight to your inbox.</p>
+
+                      <p>We’re committed to providing you with valuable information that will keep you informed, inspired, and ahead of the curve. If there’s anything specific you’d love to see in our upcoming issues, feel free to reply to this email – we’d love to hear from you!</p>
+
+                      <p>Stay tuned for more, and welcome aboard!</p>
+
+                      <p class="footer">Best regards,<br>Anas Yakubu</p>
+                  </div>
+              </body>
+              </html>`,
+        sender: {
+          name: "Anas Yakubu",
+          email: "yakubuanas02@gmail.com",
+        },
+        recipients: {
+          // name: "My recipient's name",
+          email: data.email,
+        },
+      });
     } catch (error) {
       console.log(error);
     } finally {
