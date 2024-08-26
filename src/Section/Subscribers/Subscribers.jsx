@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { createClient } from "smtpexpress";
 
 const smtpexpressClient = createClient({
-  projectId: "sm0pid-GNSi_42MRoNaqrNQr1RF_oO21",
-  projectSecret: "02850ea442d078d93b2c66543cf4a07dbddf569b3fc09752bd",
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  projectSecret: import.meta.env.VITE_PROJECR_SECRET,
 });
 
 const Subscribers = () => {
