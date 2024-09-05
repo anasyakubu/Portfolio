@@ -72,7 +72,7 @@ const AboutSection = () => {
                 </p>
                 <div className="">
                   <div className="flex gap-3">
-                    <Fade cascade direction="right">
+                    <Fade cascade direction="right" triggerOnce>
                       <p className="text-sm flex gap-2 mt-5">
                         <span className="text-green-500">
                           <FaRegStar />
@@ -100,7 +100,7 @@ const AboutSection = () => {
                     </Fade>
                   </div>
                   <div className="flex gap-3">
-                    <Fade cascade direction="right" delay={2000}>
+                    <Fade cascade direction="right" delay={2000} triggerOnce>
                       <p className="text-sm flex gap-2 mt-5">
                         <span className="text-green-500">
                           <FaRegStar />
@@ -128,7 +128,7 @@ const AboutSection = () => {
                     </Fade>
                   </div>
                   <div className="flex gap-3">
-                    <Fade cascade direction="right" delay={3000}>
+                    <Fade cascade direction="right" delay={3000} triggerOnce>
                       <p className="text-sm flex gap-2 mt-5">
                         <span className="text-green-500">
                           <FaRegStar />
@@ -157,7 +157,7 @@ const AboutSection = () => {
                     </Fade>
                   </div>
                   <div className="flex gap-3">
-                    <Fade cascade direction="right" delay={4000}>
+                    <Fade cascade direction="right" delay={4000} triggerOnce>
                       <p className="text-sm flex gap-2 mt-5">
                         <span className="text-green-500">
                           <FaRegStar />

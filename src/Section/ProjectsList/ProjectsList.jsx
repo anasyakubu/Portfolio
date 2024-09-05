@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ProjectCards from "../../Components/ProjectCards";
 import Skeleton from "../../Components/SkeletonProjects";
+import { Fade } from "react-awesome-reveal";
 
 const ProjectsList = () => {
   const [loading, setLoading] = useState(false);
@@ -93,19 +94,21 @@ const ProjectsList = () => {
               </div>
             ) : (
               <div className="p-1 space-y-2 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0">
-                {currentProjects.map((project) => (
-                  <ProjectCards
-                    key={project._id}
-                    id={project._id}
-                    Image={project.projectImage}
-                    title={project.name}
-                    details={project.details}
-                    live={project.status}
-                    link={project.projectLink}
-                    color={project.bgColor}
-                    // createdAt={project.createdAt}
-                  />
-                ))}
+                <Fade cascade direction="left" triggerOnce>
+                  {currentProjects.map((project) => (
+                    <ProjectCards
+                      key={project._id}
+                      id={project._id}
+                      Image={project.projectImage}
+                      title={project.name}
+                      details={project.details}
+                      live={project.status}
+                      link={project.projectLink}
+                      color={project.bgColor}
+                      // createdAt={project.createdAt}
+                    />
+                  ))}
+                </Fade>
               </div>
             )}
           </div>
