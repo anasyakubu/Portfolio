@@ -7,28 +7,6 @@ import { Link } from "react-router-dom";
 // import jsPDF from "jspdf";
 
 const Hero = () => {
-  // const DownloadPDF = () => {
-  //   const pdfUrl = "../../assets/Resume.pdf"; // Adjust the path to your PDF file
-
-  //   fetch(pdfUrl)
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       return response.blob();
-  //     })
-  //     .then((blob) => {
-  //       const url = window.URL.createObjectURL(blob);
-  //       const a = document.createElement("a");
-  //       a.href = url;
-  //       a.download = "Anas_Yakubu.pdf";
-  //       document.body.appendChild(a);
-  //       a.click();
-  //       a.remove();
-  //       toast.success("Resume Downloaded");
-  //     })
-  //     .catch((error) => console.error("Error fetching the PDF:", error));
-  // };
   // #aeaeae
   // #f8f8f8
   // font-nunito-eb
@@ -37,7 +15,7 @@ const Hero = () => {
       <Nav />
       <div className="p-32 lg:py-10">
         <div className="">
-          <Zoom>
+          <Zoom triggerOnce>
             <h6 className="text-[#aeaeae]">Hi 👋, my name is</h6>
             <h1 className="mt-5 text-7xl font-extrabold text-[#f8f8f8]">
               Anas Yakubu.
