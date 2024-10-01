@@ -89,7 +89,7 @@ const Subscribers = () => {
               </html>`,
         sender: {
           name: "Anas Yakubu",
-          email: "yakubuanas02@gmail.com",
+          email: "yakubuanas04@gmail.com",
         },
         recipients: {
           // name: "My recipient's name",

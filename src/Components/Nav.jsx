@@ -26,10 +26,10 @@ export default function Nav() {
   // };
 
   return (
-    <div className="bg-transparent">
-      <header className="inset-x-0 top-0 z-50">
+    <div className="bg-transparent pb-24">
+      <header className="inset-x-0 top-0 z-50 fixed">
         <nav
-          className="flex items-center justify-between p-6 lg:px-8"
+          className="flex items-center justify-between p-6 lg:px-8 bg-transparent bg-opacity-20 backdrop-blur-lg"
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
