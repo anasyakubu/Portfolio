@@ -12,18 +12,10 @@ const navigation = [
   { name: "Projects", href: "/Projects" },
   { name: "Blog", href: "/Blog" },
   { name: "Contact", href: "/Messages" },
-  // { name: "Contact", href: "#" },
 ];
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // const handleLogout = () => {
-  //   // Clear token from localStorage or sessionStorage
-  //   localStorage.removeItem("token");
-  //   // Redirect to login page
-  //   history.push("/login");
-  // };
 
   return (
     <div className="bg-transparent pb-24">
